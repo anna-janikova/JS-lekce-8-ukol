@@ -17,4 +17,5 @@ const cancelRing = () => {
     clearTimeout(ring)
 }
 
-setTimeout(cancelRing, 2000) //tento interval se spustí dřív jak za 5 vteřin, takže vymaže ten předchozí, který se tím pádem vůbec nespusí 
+let button = document.querySelector(".button");
+button.addEventListener( "click", cancelRing)
