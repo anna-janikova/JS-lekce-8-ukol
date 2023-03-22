@@ -11,10 +11,10 @@ let zprava = Number(prompt("kolik sekund uplyne než začne budík zvonit?"))*10
 
 //setTimeout(ring, 5000) --> zvoň každých 5 vteřin
 
-setInterval(ring, zprava)
+const timeout = setTimeout(ring, zprava)
 
 const cancelRing = () => {
-    clearTimeout(ring)
+    clearTimeout(timeout)
 }
 
 let button = document.querySelector(".button");
